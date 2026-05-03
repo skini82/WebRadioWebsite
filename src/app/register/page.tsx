@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { LanguageSelect } from "./LanguageSelect";
 
 type FormState = {
   email: string;
@@ -178,20 +179,10 @@ export default function RegisterPage() {
           </Field>
 
           <Field label="Lingua preferita">
-            <select
+            <LanguageSelect
               value={form.preferredLanguage}
-              onChange={(e) =>
-                update("preferredLanguage", e.target.value as "en" | "it")
-              }
-              className="input"
-            >
-              <option value="en" className="bg-slate-900 text-white">
-                🇬🇧 English
-              </option>
-              <option value="it" className="bg-slate-900 text-white">
-                🇮🇹 Italiano
-              </option>
-            </select>
+              onChange={(v) => update("preferredLanguage", v)}
+            />
           </Field>
 
           {error && (
