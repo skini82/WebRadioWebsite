@@ -186,10 +186,10 @@ export default function RegisterPage() {
               className="input"
             >
               <option value="en" className="bg-slate-900 text-white">
-                English
+                🇬🇧 English
               </option>
               <option value="it" className="bg-slate-900 text-white">
-                Italiano
+                🇮🇹 Italiano
               </option>
             </select>
           </Field>
